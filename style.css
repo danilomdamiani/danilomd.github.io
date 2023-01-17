@@ -44,11 +44,19 @@ nav {
 
 .contato {
     background-color: black;
-    padding: 8px 16px;
     color:white;
     border-radius: 8px;
-    
     transition: 500ms ease;
+    animation: contatoIn 1s cubic-bezier(.06,.64,.07,.93) forwards
+}
+
+@keyframes contatoIn {
+    from {
+        padding: 0;
+    }
+    to {   
+        padding: 8px 16px;
+    }
 }
 
 .contato:hover {
@@ -107,7 +115,7 @@ nav {
     animation: fadeInBottom 1.5s ease 0.5s forwards;
   }
 
-  @keyframes fadeInBottom {
+ @keyframes fadeInBottom {
     from {
         opacity: 0;
         transform: translateY(100px);
@@ -117,3 +125,34 @@ nav {
         transform: translateY(0);
     }
   }
+
+@media screen and (max-width: 1100px) {
+    header {
+        gap: 20vw;
+    }
+    .hero-text {
+        font-size: 80px;
+        width: 300px;
+    }
+    .hero-subtext{
+        font-size: 24px;
+        width: 400px;
+    }
+  }
+
+@media screen and (max-width: 700px) {
+    nav {
+        display: none;
+    }
+    .danilomd {
+        font-size: 36px;
+    }
+    .hero-text {
+        font-size: 60px;
+        width: 300px;
+    }
+    .hero-subtext{
+        font-size: 24px;
+        width: 300px;
+    }
+}

@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    /* border: 1px solid red; */
+}
+
+.roxo {
+    background-color: #5A1CC0;
+}
+
+body {
+    font-size: 100%;
+    font-family: Poppins, sans-serif;
+    padding: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 600px;
+    margin: 32px auto;
+    width: max-content;
+    background: #FFFFFF;
+    border-radius: 8px;
+}
+
+.danilomd{
+    color: black;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.nav {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    height:40px;
+}
+
+.item-nav{
+    color: black;
+}
+
+.contato {
+    -webkit-box-shadow:inset 0px 0px 0px 3px#5A1CC0;
+    -moz-box-shadow:inset 0px 0px 0px 3px #5A1CC0;
+    box-shadow:inset 0px 0px 0px 3px #5A1CC0;
+    border-radius: 32px;
+    transition: 300ms ease;
+    padding: 8px 16px;
+}
+
+
+.contato:hover {
+    color: white;
+    background-color: #5A1CC0;
+}
+
+.menu{
+    display: none;
+    cursor: pointer;
+    width: 50px;
+}
+
+.hvr-underline-from-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+  }
+.hvr-underline-from-left:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: #000000;
+    height: 1px;
+    
+    transition: right 0.3s ease-out;
+  }
+.hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before {
+    right: 0;
+  }
+
+.hero {
+    width: 1060px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.prazer {
+    font-size: 64px;
+}
+
+.hero-text {
+    width: 450px;
+    font-size: 128px;
+    font-weight: 500;
+    line-height: 80%;
+    animation: fadeInBottom 1.5s cubic-bezier(.67,.1,.32,1);
+}
+
+.hero-textos {
+    display: flex;
+    align-items:flex-end;
+    gap: 10px;
+}
+
+.hero-textos h2{
+    color: #dddddd;
+    font-weight: 600;
+    opacity: 0;
+    font-size: 40px;
+    line-height: 75.5%;
+    animation: fadeInLeft 1s ease 0.7s forwards;
+}
+
+.hero-subtext {
+    font-weight: 400;
+    font-size: 24px;
+    width: 450px;
+    opacity: 0;
+    animation: fadeInBottom 1.5s ease 0.5s forwards;
+}
+
+.button {
+    display: inline-block;
+    color: white;
+    max-width: fit-content;
+    border-radius: 100px;
+    padding: 8px 24px;
+    font-weight: 300;
+    font-size: 24px;
+    transition: background-color 300ms ease;
+}
+
+.vamos-conversar {
+    margin-top: 40px;
+    opacity: 0;
+    animation: fadeInBottom 1.5s ease 0.7s forwards;
+}
+
+.button:hover {
+    background-color: #A959FA;
+}
+
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    header {
+        gap: 20vw;
+    }
+
+    .hero {
+        width: calc(460px + 20vw);
+    }
+
+    .hero-text {
+        font-size: 80px;
+        width: 300px;
+    }
+
+    .prazer {
+        font-size: 38px;
+    }
+
+    .hero-textos {
+        gap: 0;
+    }
+    
+    .hero-textos h2 {
+        font-size: 28px;
+    }
+
+    .hero-subtext {
+        font-size: 16px;
+        width: 300px;
+    }
+
+    .button {
+        font-size: 16px;
+        padding: 6px 16px;
+    }
+  }
+
+@media screen and (max-width: 700px) {
+    header {
+        width:max-content;
+    }
+    .nav {
+        position: fixed;
+        transition: 0.5s ease;
+        transform: translateY(80px);
+        opacity: 0;
+    }
+
+    .nav.active {
+        z-index: 2;
+        opacity: 1;
+    }
+    .menu {
+        display: block;
+        border-radius: 8px;
+        transition: 0.5s;
+    }
+
+    .menu.active {
+        background-color: #dddddd;
+    }
+    
+    .danilomd {
+        font-size: 36px;
+    }
+
+    .hero {
+        width: 400px;
+    }
+    
+    .prazer {
+        font-size: 34px;
+    }
+    
+    .hero-text {
+        font-size: 60px;
+        width: 300px;
+    }
+
+    .hero-textos h2 {
+        font-size: 24px;
+        margin-left: -80px;
+    }
+
+    .hero-subtext{
+        font-size: 16px;
+        width: 300px;
+    }
+}

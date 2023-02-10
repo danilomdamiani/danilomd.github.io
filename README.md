@@ -2,7 +2,7 @@
 Site pessoal para portfólio. Ainda em fase de protótipo.
 https://danilomdamiani.github.io
 
-##A fazer:
+## A fazer:
 * Versão mobile da home
 * Animações somente quando o elemento aparecer
 * Página de contato

@@ -412,6 +412,10 @@ footer {
     font-weight: 300;
 }
 
+.footer p {
+    color: #5E4F77;
+}
+
 h4 {
     font-size: 32px;
     font-weight: 300;
